@@ -30,12 +30,35 @@
 \pard\sa150\b\fs24 Task 9 \'96 Generating the README.md\par
 \pard\sa100\b0\fs22 Prompt used: "Generate a README.md file describing my portfolio project: project description, features, pages, tech stack, requirements, installation steps, and my author details with my GitHub profile link."\line Result/Output: The agent generated a complete Markdown README with a features table, routes table, tech stack, installation instructions, and a link to PROMPT_LOG.md.\par
 \pard\sa150\b\fs24 Task 10 \'96 Version control and Git workflow\par
-\pard\sa100\b0\fs22 Prompt used: "Initialize a git repository, stage everything, and make descriptive commits following my commit message standards like \'91Initial commit: Set up Laravel Blade layout and basic info page\'92. Then connect my public GitHub repository https://github.com/barbongentrix/barbonportfolio.git as origin and push the main branch."\line Result/Output: The agent initialized git, made six granular descriptive commits, and connected origin. The final push was completed by the student after signing in with the barbongentrix account.\par
+\pard\sa100\b0\fs22 Prompt used: "Initialize a git repository, stage everything, and make descriptive commits following my commit message standards like \'91Initial commit: Set up Laravel Blade layout and basic info page\'92. Then connect my public GitHub repository https://github.com/barbongentrix/barbonportfolio.git as origin and push the main branch."\line Result/Output: The agent initialized git, made granular descriptive commits, and connected origin. The final push was completed by the student after signing in with the barbongentrix account.\par
+\pard\sa150\b\fs24 Task 11 \'96 Updating the education year labels and chips\par
+\pard\sa100\b0\fs22 Prompt used: "Remove 2021 from college, just put up to present; secondary years attended - 2020; elementary year attended - 2016" followed by "make the years attented to year graduated in secondary and elementary".\line Result/Output: The agent updated the timeline chips: College "Years attended: Up to Present", Secondary "Year graduated: 2020", Elementary "Year graduated: 2016".\par
+\pard\sa150\b\fs24 Task 12 \'96 Adding the Certifications dashboard before Projects\par
+\pard\sa100\b0\fs22 Prompt used: "Put certification dashboard before project."\line Result/Output: The agent created a new /certifications route and dashboard with an empty state and a ready-to-copy card template, placed before Projects in the navigation.\par
+\pard\sa150\b\fs24 Task 13 \'96 Adding the Skills dashboard before Certifications\par
+\pard\sa100\b0\fs22 Prompt used: "Put skill dashboard before certifications."\line Result/Output: The agent created a new /skills route and dashboard with an empty state and a skill-category card template with progress bars, placed before Certifications.\par
+\pard\sa150\b\fs24 Task 14 \'96 Filling the Skills with the coding skills of the system\par
+\pard\sa100\b0\fs22 Prompt used: "Put contents in skills about coding of this system."\line Result/Output: The agent filled the Skills dashboard with the actual technologies used in building the portfolio, organized into Backend Development (Laravel, PHP/XAMPP/Composer, Routing and Blade), Frontend Development (Tailwind CSS, HTML/CSS, responsive design), and Tools and Version Control (Git and GitHub, npm and Vite, AI-assisted development), each with gradient progress bars.\par
+\pard\sa150\b\fs24 Task 15 \'96 Adding the certificate images with their titles\par
+\pard\sa100\b0\fs22 Prompt used: "Put these two certificate images in certifications with their title" (DOST/iHub "Startup Now Cordillera: Exploring Programs, Funding, and Opportunities for Aspiring Startups" and DICT "Understanding Startups and Getting Your Idea Ready for the Philippine Startup Challenge XI" certificates attached).\line Result/Output: The agent cropped the phone screenshots, saved the clean certificate images under public/images/certificates/, and built two certificate cards with thumbnail, title, issuer chip, date chip, and a link to view the full-size certificate.\par
+\pard\sa150\b\fs24 Task 16 \'96 Adding the project screenshots with the project title\par
+\pard\sa100\b0\fs22 Prompt used: "Put these two screenshots in projects with the title of QR CODE EVENT ATTENDANCE SYSTEM."\line Result/Output: The agent replaced the empty projects state with a featured full-width project card showing both screenshots (login page and admin dashboard, each clickable to full size), a full description of the system for DCCP-Bangued S.Y. 2025-2026, and technology tags.\par
+\pard\sa150\b\fs24 Task 17 \'96 Single-page scrollable redesign\par
+\pard\sa100\b0\fs22 Prompt used: "Improve the design and the theme, make it all in one scrollable screen only, but don't remove the navigation dashboard."\line Result/Output: The agent converted all pages into sections of one scrollable home screen using Blade partials (hero, education, skills, certifications, projects, GitHub repositories) with numbered section headers (01-05), improved the theme with gradient hero text, glow background accents, and unified section header dividers, and kept the sticky navigation bar as anchor links with scroll-spy active highlighting and a mobile menu that closes after tapping a link. Old page URLs now redirect to their section anchors.\par
 \pard\sa300\par
 
 \pard\sa200\b\fs30 PART 2 \'96 GIT COMMIT HISTORY\par
 \pard\sa100\b0\fs22\i Command used: git log --pretty=format:"%h %s"\par
 \pard\sa200\b0\i0\f2\fs20\cf2
+5806220 Redesign portfolio into single-page scrollable layout with scroll-spy navigation
+41c5956 Add QR Code Event Attendance System project card with screenshots
+3cb945a Add certificate images and populate certifications dashboard with titles
+44a8a12 Change year labels to year graduated for secondary and elementary
+f73a935 Add coding skills dashboard content used in building this system
+69e7ec7 Add skills dashboard page before certifications in navigation
+da2d689 Add certifications dashboard page before projects in navigation
+2b7f78c Update year chips on educational background timeline
+90066db Update Word report with complete GIT commit history
 10059d4 Add default Vite entrypoint files and storage framework directories
 958a42d Add Word report containing AI prompt log and GIT commit history
 3bf4b44 Create PROMPT_LOG.md documenting all AI agent prompts used during development
@@ -43,40 +66,10 @@
 e78f829 Set up Laravel Blade layout, navigation bar, and routes for portfolio pages
 cca2cb0 Initial commit: Set up Laravel project instance with Vite and Tailwind CSS dependencies
 
-
 \pard\sa300\f0\fs22\cf0\b\par
 \pard\sa100\b0\fs22\i Command used: git log\par
 \pard\sa200\b0\i0\f2\fs20\cf2
-commit 10059d45bfa5e159dcd9ad3d36ab0cca196f9e05
-Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>
-Date:   MMM d, yyyy HH:mm
-Message: Add default Vite entrypoint files and storage framework directories
-
-commit 958a42de019f67353cfb175c23da1ac791cfa989
-Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>
-Date:   MMM d, yyyy HH:mm
-Message: Add Word report containing AI prompt log and GIT commit history
-
-commit 3bf4b44b6dca0c1797d02550fa01a29d4b5919c5
-Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>
-Date:   MMM d, yyyy HH:mm
-Message: Create PROMPT_LOG.md documenting all AI agent prompts used during development
-
-commit 7b73369f4e1e35edf6ce3a93d88b6beb73bec420
-Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>
-Date:   MMM d, yyyy HH:mm
-Message: Create README.md with project description, features, and setup instructions
-
-commit e78f8294ffd75693ad800a6b22ca7d3148647937
-Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>
-Date:   MMM d, yyyy HH:mm
-Message: Set up Laravel Blade layout, navigation bar, and routes for portfolio pages
-
-commit cca2cb02deb521a3c0c424dbdbf7cae82eb28e49
-Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>
-Date:   MMM d, yyyy HH:mm
-Message: Initial commit: Set up Laravel project instance with Vite and Tailwind CSS dependencies
-
+commit 5806220cbcce292492eaf1ea4ce40084559e5e99\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Redesign portfolio into single-page scrollable layout with scroll-spy navigation\\line \\line commit 41c59561ad7ee329863517721a8bc6d4990c6bb3\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Add QR Code Event Attendance System project card with screenshots\\line \\line commit 3cb945a3c13e9f33f316403cf6e278a06b5e1ed5\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Add certificate images and populate certifications dashboard with titles\\line \\line commit 44a8a122db3396f88f96f28e230dffe8a560f279\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Change year labels to year graduated for secondary and elementary\\line \\line commit f73a935a95709dc2ae4466b4f97867cb3807eef6\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Add coding skills dashboard content used in building this system\\line \\line commit 69e7ec7c72608eef1f6a7b7de2636ddd3175185f\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Add skills dashboard page before certifications in navigation\\line \\line commit da2d6890634c2650f09c23800d5d1ab3a0cc3888\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Add certifications dashboard page before projects in navigation\\line \\line commit 2b7f78cf0c1be27a614a4980bfe5a1763f3cc6d8\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Update year chips on educational background timeline\\line \\line commit 90066db4c195dbdde396ee1bf3c99163216e61aa\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Update Word report with complete GIT commit history\\line \\line commit 10059d45bfa5e159dcd9ad3d36ab0cca196f9e05\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Add default Vite entrypoint files and storage framework directories\\line \\line commit 958a42de019f67353cfb175c23da1ac791cfa989\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Add Word report containing AI prompt log and GIT commit history\\line \\line commit 3bf4b44b6dca0c1797d02550fa01a29d4b5919c5\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Create PROMPT_LOG.md documenting all AI agent prompts used during development\\line \\line commit 7b73369f4e1e35edf6ce3a93d88b6beb73bec420\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Create README.md with project description, features, and setup instructions\\line \\line commit e78f8294ffd75693ad800a6b22ca7d3148647937\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Set up Laravel Blade layout, navigation bar, and routes for portfolio pages\\line \\line commit cca2cb02deb521a3c0c424dbdbf7cae82eb28e49\\line Author: Gentrix Jay Barbon <barbongentrix@users.noreply.github.com>\\line Date:   MMM d, yyyy\\HH:mm\\line Message: Initial commit: Set up Laravel project instance with Vite and Tailwind CSS dependencies\\line
 
 \pard\sl300\f0\fs26\cf0\b End of report\par
 \pard\sa100\b0\fs22\generated on 11/08/2026\par
