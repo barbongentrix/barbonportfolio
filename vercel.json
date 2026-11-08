@@ -3,18 +3,7 @@
     "version": 2,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.7.4",
-            "excludeFiles": [
-                ".env",
-                ".env.*",
-                "database/**",
-                "tests/**",
-                "storage/logs/**",
-                "storage/framework/cache/**",
-                "node_modules/**",
-                "*.md",
-                "*.doc"
-            ]
+            "runtime": "vercel-php@0.7.4"
         }
     },
     "routes": [
