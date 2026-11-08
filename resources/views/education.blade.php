@@ -33,7 +33,7 @@
                     <p class="mt-1 text-sm text-slate-400">Bachelor of Science in Information Technology (BSIT) &middot; Bangued, Abra, Philippines</p>
                     <p class="mt-3 inline-flex items-center gap-2 text-xs text-slate-500">
                         <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5"/></svg>
-                        Years attended: 2021 &ndash; Present
+                        Years attended: Up to Present
                     </p>
                 </a>
             </article>
@@ -51,7 +51,7 @@
                     <p class="mt-1 text-sm text-slate-400">High School Diploma &middot; Philippines</p>
                     <p class="mt-3 inline-flex items-center gap-2 text-xs text-slate-500">
                         <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5"/></svg>
-                        Years attended
+                        Years attended: 2020
                     </p>
                 </div>
             </article>
@@ -69,7 +69,7 @@
                     <p class="mt-1 text-sm text-slate-400">Elementary Diploma &middot; Philippines</p>
                     <p class="mt-3 inline-flex items-center gap-2 text-xs text-slate-500">
                         <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5"/></svg>
-                        Years attended
+                        Years attended: 2016
                     </p>
                 </div>
             </article>
