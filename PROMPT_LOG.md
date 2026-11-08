@@ -77,3 +77,8 @@
 
 * Prompt used: "Fix all the codes that is required in deployment in vercel."
 * Result/Output: Big Pickle made the app serverless-ready: added api/index.php (Vercel PHP lambda entry point), added vercel.json (vercel-php@0.7.4 runtime, build command that runs composer install + npm ci + npm run build, routing that serves /images and /build assets statically and sends everything else to the app, and production environment variables), updated bootstrap/app.php to move storage to the writable /tmp directory on Vercel with automatic directory creation, changed the APP_URL fallback in config/app.php to empty so asset links resolve to the real deployed domain, switched SESSION_DRIVER to cookie, CACHE_STORE to file and QUEUE_CONNECTION to sync (the Database: None constraint, since serverless has no database), applied the same no-database values in .env and .env.example, and documented the deployment steps and the required APP_KEY environment variable in the README.
+
+### Task: 19 - Setting the real profile picture
+
+* Prompt used: "Put this as the profile picture in home" (Data Center College of the Philippines student ID card image attached).
+* Result/Output: Big Pickle copied the image to public/images/profile.jpg and redesigned the hero profile display from a circular avatar to a rounded portrait card so the full student ID is visible, and added a student number chip (2021-IT-0147) to the contact details.
