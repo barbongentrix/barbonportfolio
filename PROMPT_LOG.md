@@ -72,3 +72,8 @@
 
 * Prompt used: "Improve the design and the theme, make it all in one scrollable screen only, but don't remove the navigation dashboard."
 * Result/Output: Big Pickle converted every page into sections of one scrollable home screen using Blade partials (hero, education, skills, certifications, projects, GitHub repos) numbered 01-05, upgraded the design with gradient text, glow accents, numbered section headers, and kept the sticky navigation bar as anchor links with scroll-spy active highlighting and a closing mobile menu. Old page URLs now redirect to their section anchors.
+
+### Task: 18 - Preparing the code for Vercel deployment
+
+* Prompt used: "Fix all the codes that is required in deployment in vercel."
+* Result/Output: Big Pickle made the app serverless-ready: added api/index.php (Vercel PHP lambda entry point), added vercel.json (vercel-php@0.7.4 runtime, build command that runs composer install + npm ci + npm run build, routing that serves /images and /build assets statically and sends everything else to the app, and production environment variables), updated bootstrap/app.php to move storage to the writable /tmp directory on Vercel with automatic directory creation, changed the APP_URL fallback in config/app.php to empty so asset links resolve to the real deployed domain, switched SESSION_DRIVER to cookie, CACHE_STORE to file and QUEUE_CONNECTION to sync (the Database: None constraint, since serverless has no database), applied the same no-database values in .env and .env.example, and documented the deployment steps and the required APP_KEY environment variable in the README.

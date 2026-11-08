@@ -1,0 +1,29 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "version": 2,
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.4",
+            "excludeFiles": "{.env,storage/logs/**,node_modules/**,database/**,tests/**}"
+        }
+    },
+    "buildCommand": "composer install --optimize-autoloader --no-dev --no-progress && npm ci --no-audit --no-fund && npm run build",
+    "routes": [
+        { "src": "/images/(.*)", "dest": "/public/images/$1" },
+        { "src": "/build/(.*)", "dest": "/public/build/$1" },
+        { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+        { "src": "/robots.txt", "dest": "/public/robots.txt" },
+        { "src": "/(.*)", "dest": "/api/index.php" }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_STORAGE": "/tmp/storage",
+        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
+        "SESSION_DRIVER": "cookie",
+        "CACHE_STORE": "file",
+        "QUEUE_CONNECTION": "sync",
+        "LOG_CHANNEL": "stderr",
+        "CACHE_PREFIX": "barbonportfolio_cache"
+    }
+}
