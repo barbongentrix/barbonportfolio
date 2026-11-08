@@ -67,16 +67,19 @@ This project is ready to deploy on [Vercel](https://vercel.com) using the commun
 2. Set **Environment Variables** in the Vercel project settings:
    - `APP_KEY` — a base64 key: run `php artisan key:generate --show` locally and paste the value
    - `APP_URL` — optional, your Vercel domain
-3. Deploy. The build command in `vercel.json` runs `composer install`, `npm ci`, and `npm run build` automatically.
+3. Run `npm run build` and push the compiled `public/build` assets (or deploy from the CLI with `vercel`).
+4. Deploy. The `vercel-php` runtime runs `composer install` automatically during its build step.
 
 Files that enable the deployment:
 
 | File | Purpose |
 | ---- | ------- |
-| `vercel.json` | PHP runtime, build command, routing (serves `/images` and `/build` as static, everything else through the app) and serverless environment variables |
+| `vercel.json` | PHP runtime, routing (serves `/images` and `/build` as static, everything else through the app), serverless environment variables, and `/tmp` overrides for every Laravel bootstrap cache file |
 | `api/index.php` | Serverless entry point (Vercel requires the app under `/api`) |
-| `bootstrap/app.php` | Redirects storage to the writable `/tmp/storage` directory on Vercel (the server filesystem is read-only) |
+| `bootstrap/app.php` | Redirects storage to the writable `/tmp/storage` directory on Vercel (the server filesystem is read-only), creates missing storage directories, and trusts the edge proxy headers so URLs keep the correct scheme |
 | `config/app.php` | Empty `APP_URL` fallback so generated asset links use the real domain |
+| `.vercelignore` | Excludes local `vendor`/`node_modules` from the upload — the runtime installs Composer dependencies itself |
+| `public/build` | Pre-compiled Tailwind assets committed so they are served statically without a remote build step |
 
 > **Note on the "Database: None" constraint:** the app uses the `cookie` session driver and `file` cache — no database, migrations, or models are needed in production either.
 

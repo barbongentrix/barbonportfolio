@@ -11,7 +11,10 @@ $app = Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // Vercel terminates TLS at its edge and forwards the request with
+        // proxy headers (X-Forwarded-For / X-Forwarded-Proto). Trusting the
+        // proxy keeps generated URLs and redirects on the correct scheme.
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

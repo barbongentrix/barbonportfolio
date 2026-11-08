@@ -4,10 +4,19 @@
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.7.4",
-            "excludeFiles": "{.env,storage/logs/**,node_modules/**,database/**,tests/**}"
+            "excludeFiles": [
+                ".env",
+                ".env.*",
+                "database/**",
+                "tests/**",
+                "storage/logs/**",
+                "storage/framework/cache/**",
+                "node_modules/**",
+                "*.md",
+                "*.doc"
+            ]
         }
     },
-    "buildCommand": "composer install --optimize-autoloader --no-dev --no-progress && npm ci --no-audit --no-fund && npm run build",
     "routes": [
         { "src": "/images/(.*)", "dest": "/public/images/$1" },
         { "src": "/build/(.*)", "dest": "/public/build/$1" },
@@ -19,8 +28,14 @@
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_STORAGE": "/tmp/storage",
-        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
+        "VIEW_COMPILED_PATH": "/tmp/views",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
         "SESSION_DRIVER": "cookie",
+        "SESSION_SECURE_COOKIE": "true",
         "CACHE_STORE": "file",
         "QUEUE_CONNECTION": "sync",
         "LOG_CHANNEL": "stderr",

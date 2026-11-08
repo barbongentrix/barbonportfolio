@@ -82,3 +82,8 @@
 
 * Prompt used: "Put this as the profile picture in home" (Data Center College of the Philippines student ID card image attached).
 * Result/Output: Big Pickle copied the image to public/images/profile.jpg and redesigned the hero profile display from a circular avatar to a rounded portrait card so the full student ID is visible, and added a student number chip (2021-IT-0147) to the contact details.
+
+### Task: 20 - Final Vercel deployment audit and fixes
+
+* Prompt used: "Fix all the code that is required for deployment in vercel" (second audit pass).
+* Result/Output: Big Pickle researched the vercel-php runtime source and the official Laravel example, then: confirmed composer install runs automatically inside the runtime build (removed the duplicate composer step), changed the runtime environment variables to point every Laravel bootstrap cache file (config, events, packages, routes, services) to the writable /tmp directory, added trusted proxy middleware so generated URLs keep https behind Vercel's edge, committed the compiled public/build assets so they are served statically without a remote build step, created a .vercelignore excluding vendor and node_modules from the upload, fixed the excludeFiles list to keep vendor inside the function bundle, and refreshed the README deployment guide.

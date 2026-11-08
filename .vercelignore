@@ -1,0 +1,9 @@
+# Files not needed on the Vercel build / function.
+# The vercel-php runtime installs composer dependencies itself,
+# so heavy local folders are excluded from the upload.
+node_modules
+vendor
+.git
+storage/framework/cache
+storage/logs
+.env
