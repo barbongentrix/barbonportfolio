@@ -1,0 +1,33 @@
+{\rtf1\ansi\ansicpg1252\deff0
+{\fonttbl{\f0\fmodern Courier New;}{\f1\fswiss Arial;}}
+{\colortbl;\red0\green0\blue0;\red106\green115\blue128;\red31\green100\blue255;}
+\f1\fs26
+\pard\sa200\qc\b\fs40\cf0 AI PROMPT LOG & GIT COMMIT HISTORY\par
+\pard\ql\b0\fs22\cf1\i Barbon Portfolio \'B4 Laravel + Blade + Tailwind CSS \'B4 Gentrix Jay B. Barbon (BSIT 4)\par
+\pard\qr\b0\i0\cf2\fs18 Generated for IPA Midterm Activity 1\'963\par
+\pard\sa300\ql\cf0\fs26\par
+\pard\sa200\b\fs30 PART 1 \'96 AI PROMPT LOG (Agent: OpenCode / Big Pickle)\par
+\pard\sa300\b0\fs24 All prompts given to the development agent, in order of use, start to finish.\par
+\pard\sa150\b\fs24 Task 1 \'96 Setting up the Laravel project\par
+\pard\sa100\b0\fs22 Prompt used: "Create a new Laravel project in my folder using the latest stable version, with no database, migrations, or models."\line Result/Output: Ran \'93composer create-project laravel/laravel\'94 and created the full Laravel project skeleton.\par
+\pard\sa150\b\fs24 Task 2 \'96 Installing styling dependencies\par
+\pard\sa100\b0\fs22 Prompt used: "Install the Node dependencies so Tailwind CSS can be compiled through Vite."\line Result/Output: Ran npm install successfully (88 packages, 0 vulnerabilities).\par
+\pard\sa150\b\fs24 Task 3 \'96 Creating the main Blade layout\par
+\pard\sa100\b0\fs22 Prompt used: "Create a main Blade layout file named layouts/app.blade.php with Tailwind CSS, a sticky navigation bar with links to Home, Education and Projects, a button to my GitHub, and a footer."\line Result/Output: Generated the shared layout with a dark theme, responsive navigation, mobile hamburger menu, and footer.\par
+\pard\sa150\b\fs24 Task 4 \'96 Creating routes for the portfolio pages\par
+\pard\sa100\b0\fs22 Prompt used: "Set up routes for the home page, the education page, and the projects page, each returning its own Blade view."\line Result/Output: Updated routes/web.php with /, /education, and /projects, each passing the active page name.\par
+\pard\sa150\b\fs24 Task 5 \'96 Building the Basic Information (Home) page\par
+\pard\sa100\b0\fs22 Prompt used: "Create a responsive Blade home page for my basic information: my name Gentrix Jay B. Barbon, a profile picture, contact number 09156426499, location Bangued, Abra, a short bio, and a section with clickable GitHub repository links as styled cards."\line Result/Output: Generated hero section with gradient profile ring, contact chips, CTA buttons, and two GitHub repository cards.\par
+\pard\sa150\b\fs24 Task 6 \'96 Adding the profile picture placeholder\par
+\pard\sa100\b0\fs22 Prompt used: "Add a placeholder profile image in public/images so the site works immediately; I will replace it with my real photo later."\line Result/Output: Created an SVG placeholder avatar at public/images/profile.svg.\par
+\pard\sa150\b\fs24 Task 7 \'96 Building the Educational Background page\par
+\pard\sa100\b0\fs22 Prompt used: "Create a responsive Blade component for my educational history using Tailwind CSS. It should be a vertical timeline with three entries: College \'97 Data Center College of Bangued (BSIT); Secondary \'97 Little Flower High School; Elementary \'97 Malamsit Elementary School."\line Result/Output: Generated a vertical gradient timeline with icon markers, level badges, degree text, and year chips.\par
+\pard\sa150\b\fs24 Task 8 \'96 Building the Projects page (empty dashboard)\par
+\pard\sa100\b0\fs22 Prompt used: "Create the projects page as an empty dashboard for now: a clean empty state message with a link to my GitHub profile, and a commented-out template card so I can add project cards later."\line Result/Output: Generated a dashed-border empty state plus a ready-to-copy commented project card template.\par
+\pard\sa150\b\fs24 Task 9 \'96 Generating the README.md\par
+\pard\sa100\b0\fs22 Prompt used: "Generate a README.md describing my portfolio project: description, features, pages, tech stack, requirements, installation steps, and author details."\line Result/Output: Generated a complete readme with features table, routes table, and installation instructions.\par
+\pard\sa250\b\fs24 Task 10 \'96 Version control and Git workflow\par
+\pard\sa100\b0\fs22 Prompt used: "Initialize a git repository, stage everything, make descriptive commits, connect the public GitHub repository barbongentrix/barbonportfolio as origin, and push main."\line Result/Output: Initialized git, set remote origin, made granular descriptive commits, and pushed the main branch.\par
+\pard\sa300\b\fs30 PART 2 \'96 GIT COMMIT HISTORY\par
+\pard\sa100\b0\fs20\f0\cf2\par
+}
