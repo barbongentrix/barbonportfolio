@@ -4,7 +4,7 @@ A personal portfolio website built with **Laravel** (Blade templating) and **Tai
 
 ## Description
 
-This project is a static online portfolio that showcases the developer's basic information, educational background, projects, and GitHub repository links. Every page is rendered using Laravel Blade templates styled with Tailwind CSS via Vite.
+This project is a **single-page scrollable portfolio**. Every section — from basic information to projects — lives on the home screen (`/`), reached by smooth-scrolling through anchor navigation: Basic Information, Educational Background, Skills, Certifications, Projects, and GitHub repository links. Each page is rendered using Laravel Blade templates styled with Tailwind CSS via Vite.
 
 > **Note:** No database, migrations, or models are used — the portfolio is purely static Blade views, following the activity's technical constraints.
 
@@ -15,18 +15,23 @@ This project is a static online portfolio that showcases the developer's basic i
 - **Projects** — Dashboard grid of personal and academic work (empty for now)
 - **GitHub Repository Links** — Clickable cards linking to the source code
 
-## Pages
+## Page Sections (single scrollable screen at `/`)
 
-| Route        | Description                     |
-| ------------ | ------------------------------- |
-| `/`          | Basic information + GitHub links |
-| `/education` | Educational background timeline  |
-| `/projects`  | Projects dashboard               |
+| Section          | Anchor               | Description                       |
+| ---------------- | -------------------- | --------------------------------- |
+| Home             | `/#home`             | Basic info + bio + contact         |
+| Education        | `/#education`        | Educational background timeline    |
+| Skills           | `/#skills`           | Coding skills used in this system  |
+| Certifications   | `/#certifications`   | Certificate cards with images       |
+| Projects         | `/#projects`         | Projects dashboard with screenshots |
+| GitHub Repos     | `/#github`           | Clickable repository links          |
+
+Old URLs (`/education`, `/skills`, `/certifications`, `/projects`) redirect to their section anchors.
 
 ## Tech Stack
 
 - Laravel (latest stable)
-- Blade templating engine
+- Blade templating engine (single-page layout with view partials)
 - Tailwind CSS (via Vite)
 - Git for version control
 

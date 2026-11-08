@@ -57,3 +57,18 @@
 
 * Prompt used: "Initialize a git repository, stage everything, and make descriptive commits following my commit message standards like 'Initial commit: Set up Laravel Blade layout and basic info page'. Then connect my public GitHub repository https://github.com/barbongentrix/barbonportfolio.git as origin and push the main branch."
 * Result/Output: Big Pickle initialized git, created the remote on GitHub, and made granular descriptive commits; the final push was done by the student (`git push -u origin main`).
+
+### Task: 11 — Adding certificate images to the Certifications dashboard
+
+* Prompt used: "Put these two certificate images in certifications with their titles." (DOST/iHub 'Startup Now Cordillera' and DICT 'Understanding Startups' certificates attached as JPG screenshots)
+* Result/Output: Big Pickle cropped the phone status bar out of both screenshots, saved them under public/images/certificates/, and built two certificate cards with title, issuer, date chips, thumbnail preview, and a link to view the full-size image.
+
+### Task: 12 — Adding the project screenshots to the Projects dashboard
+
+* Prompt used: "Put these two screenshots in projects with the title 'QR CODE EVENT ATTENDANCE SYSTEM'."
+* Result/Output: Big Pickle replaced the empty state with a featured full-width project card showing the login page and admin dashboard screenshots (each clickable to full size), a complete description of the system, and tech tags.
+
+### Task: 13 — Single-page scrollable redesign
+
+* Prompt used: "Improve the design and the theme, make it all in one scrollable screen only, but don't remove the navigation dashboard."
+* Result/Output: Big Pickle converted every page into sections of one scrollable home screen using Blade partials (hero, education, skills, certifications, projects, GitHub repos) numbered 01-05, upgraded the design with gradient text, glow accents, numbered section headers, and kept the sticky navigation bar as anchor links with scroll-spy active highlighting and a closing mobile menu. Old page URLs now redirect to their section anchors.
