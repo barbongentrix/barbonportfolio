@@ -14,6 +14,12 @@ Route::get('/education', function () {
     ]);
 })->name('education');
 
+Route::get('/certifications', function () {
+    return view('certifications', [
+        'page' => 'certifications',
+    ]);
+})->name('certifications');
+
 Route::get('/projects', function () {
     return view('projects', [
         'page' => 'projects',
